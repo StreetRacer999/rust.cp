@@ -23,6 +23,9 @@ class HomeController extends Controller
      */
     public function index()
     {
+        if(Admin::user()->isRole('administrator')){
+            die('asdasd');
+        }
         return view('home');
     }
 }
